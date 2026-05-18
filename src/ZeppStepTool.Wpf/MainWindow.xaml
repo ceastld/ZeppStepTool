@@ -1,0 +1,67 @@
+﻿<Window x:Class="ZeppStepTool.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Zepp 步数工具"
+        Height="280"
+        Width="520"
+        MinHeight="260"
+        MinWidth="480"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="72" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="96" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Text="账号" />
+        <TextBox x:Name="AccountTextBox"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="8,0,12,12"
+                 VerticalContentAlignment="Center"
+                 Height="32" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="密码" />
+        <PasswordBox x:Name="PasswordBox"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="8,0,12,12"
+                     VerticalContentAlignment="Center"
+                     Height="32" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="步数" />
+        <TextBox x:Name="StepsTextBox"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Margin="8,0,12,0"
+                 VerticalContentAlignment="Center"
+                 Height="32"
+                 InputScope="Number" />
+
+        <Button x:Name="SubmitButton"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Grid.Column="2"
+                Content="提交"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Click="SubmitButton_Click" />
+
+        <TextBlock x:Name="StatusTextBlock"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Margin="0,16,0,0"
+                   TextWrapping="Wrap"
+                   Foreground="#555555"
+                   Text="请输入账号、密码和步数后点击提交。" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+# qkbuild — see ClipboardInspector / wpf-demos/wpf-monaco-editor
+
+name: zepp-step-tool
+displayName: ZeppStepTool
+versionKey: ZeppStepTool
+subprogramName: ZeppStepTool
+projectDir: src/ZeppStepTool.Wpf
+
+uploadDir: cea.zepp-step-tool
+packageName: cea.zepp-step-tool
+instruction: Zepp 运动健康账号登录并修改步数
+
+filesToInclude:
+  - "ZeppStepTool.exe"
+  - "ZeppStepTool.exe.config"
+  - "Newtonsoft.Json.dll"
+
+filesToExclude:
+  - "*.pdb"
+  - "*.xml"
+
+obfuscate: false
+toConfuse: []
