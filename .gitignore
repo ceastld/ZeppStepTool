@@ -7,3 +7,8 @@ publish/
 packages/
 
 .fake
+
+# legacy step script: local credentials and runtime state
+legacy/StepNumberChangeSNC/env
+legacy/StepNumberChangeSNC/.env
+legacy/StepNumberChangeSNC/bushu.json
